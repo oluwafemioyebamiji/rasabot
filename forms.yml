@@ -1,0 +1,10 @@
+forms:
+  buy_form:
+    cost:
+    - type: from_text
+    bedrooms:
+    - type: from_text
+    property_type:
+    - type: from_text
+    email:
+    - type: from_text
