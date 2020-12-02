@@ -4,23 +4,51 @@ session_config:
 intents:
 - greet
 - goodbye
-- affirm
-- deny
-- mood_great
-- mood_unhappy
 - bot_challenge
+- buy_home
+
+forms:
+  - buy_form
+actions:
+  - buy_form
+slots:
+  cost:
+    auto_fill: false
+    type: unfeaturized
+  
+  bedrooms:
+    auto_fill: false
+    type: unfeaturized
+  
+  bathrooms:
+    auto_fill: false
+    type: unfeaturized
+  
+  property_type:
+    auto_fill: false
+    type: unfeaturized
+
+  email:
+    auto_fill: false
+    type: unfeaturized
+
 responses:
   utter_greet:
   - text: Hey! How are you?
-  utter_cheer_up:
-  - image: https://i.imgur.com/nGF1K8f.jpg
-    text: 'Here is something to cheer you up:'
-  utter_did_that_help:
-  - text: Did that help you?
-  utter_happy:
-  - text: Great, carry on!
   utter_goodbye:
   - text: Bye
   - text: Do have a nice day
   utter_iamabot:
   - text: I am a bot, powered by Rasa.
+  utter_buy_home:
+  - text: Lets code this.
+  
+  utter_ask_property_type:
+    - text: What type of property are you looking at?
+
+  utter_bedrooms:
+    - text: How many bedrooms are you looking at?
+  utter_ask_bathrooms:
+    - text: How many bathrooms do you want?
+  utter_email:
+    - text: What type of property are you looking at?
